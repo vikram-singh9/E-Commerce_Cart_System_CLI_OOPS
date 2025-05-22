@@ -13,14 +13,13 @@ class Cart:
         self.items.append(product)
         print(f'Product added to cart: {product.name}')
     
-    def remove_product(self, product):
+    def remove_product(self, product_name):
         for p in self.items:
-            if p.name == product.name:
+            if p.name == product_name:
                 self.items.remove(p)
-                print(f'product removes from the cart: {product.name}')
-            return
-                
-        self.items.remove(p)
+                print(f"Removed: {product_name}")
+                return
+        print(f"{product_name} not found in cart.")
 
 
     def show_cart(self):
@@ -38,7 +37,7 @@ class Cart:
 
 
 p1 = Product('Laptop', 50000)
-p2 = Product('Ps5 Gaming Console', 120000)
+p2 = Product('Ps5', 120000)
 p3 = Product('Sony LED', 800000)
 p4 = Product('Bike', 8200000)
 
@@ -56,12 +55,11 @@ cart.add_product(p4)
 cart.show_cart()
 
 #total amount to pay
-cart.checkout()
+# cart.checkout()
 
 
 #removing a product
-cart.remove_product(p2)
-cart.show_cart()
+cart.remove_product("Ps5")
 cart.checkout()
 
             
