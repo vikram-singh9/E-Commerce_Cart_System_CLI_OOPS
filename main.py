@@ -60,7 +60,7 @@ cart.show_cart()
 
 #removing a product
 cart.remove_product("Ps5")
-cart.checkout()
+cart.checkout()n
 
             
         
